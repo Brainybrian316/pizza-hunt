@@ -52,9 +52,9 @@ const handlePizzaSubmit = event => {
 
   const formData = { pizzaName, createdBy, size, toppings };
 
-  fetch(`/api/pizzas`, {
+  fetch('/api/pizzas', {
     method: 'POST',
-    headers: { 
+    headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     },
@@ -65,8 +65,8 @@ const handlePizzaSubmit = event => {
       alert('Pizza created successfully!');
       console.log(postResponse);
     })
-    .catch(error => {
-      console.log(error);
+    .catch(err => {
+      console.log(err);
     });
 };
 
